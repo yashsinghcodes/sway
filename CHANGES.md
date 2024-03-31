@@ -17,7 +17,7 @@ struct sway_config * config, struct sway_instance * swaynag) {
     free(p);
 }
 ```
-The Implementation is pretty simple as the function arguments are similar to all the other functions. Now we split the path on each  `" "`  and pass it to load_include_configs which is what `include` command uses to include all the files in the directory. As we can see the function is called  `load_include_configs`now I have just added a additional argument called flag in `load_include_configs`function its declaration now looks like:
+Implementation is pretty simple as the function arguments are similar to all the other functions. Now we split the path on each `<space>` and pass it to load_include_configs which is what `include` command uses to include all the files in the directory. As we can see the function is called  `load_include_configs`now I have just added a additional argument called flag in `load_include_configs`function its declaration now looks like:
 ```c 
 // sway/include/config.h
 void  load_include_configs(const  char  *path, 
